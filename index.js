@@ -1,12 +1,11 @@
-const fs = require("node:fs");
-/* const https = require("https"); */
-
 const htmlSnapshots = require("html-snapshots");
 htmlSnapshots
   .run({
     source: "./sitemap.xml",
     outputDir: "./snapshots",
+    selector: "body",
     outputDirClean: true,
+    timeout: 5000,
     input: "sitemap",
   })
   .then((completed) => {
@@ -15,4 +14,3 @@ htmlSnapshots
   .catch((error) => {
     console.log("Ошибка: " + error);
   });
-var https = require("https");
