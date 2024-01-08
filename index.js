@@ -5,8 +5,9 @@ htmlSnapshots
     outputDir: "./snapshots",
     selector: "body",
     outputDirClean: true,
-    timeout: 5000,
+    timeout: 10000,
     input: "sitemap",
+    browser: "phantomjs",
   })
   .then((completed) => {
     console.log("Успешно завершено: " + completed);
